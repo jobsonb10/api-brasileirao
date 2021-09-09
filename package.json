@@ -1,0 +1,28 @@
+{
+  "name": "api-brasileirao",
+  "version": "1.0.0",
+  "description": "Projeto final do módulo de desenvolvimento back end com node.js da Blue Edtech.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jobsonb10/api-brasileirao.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jobsonb10/api-brasileirao/issues"
+  },
+  "homepage": "https://github.com/jobsonb10/api-brasileirao#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}

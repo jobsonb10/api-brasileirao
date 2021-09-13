@@ -2,9 +2,10 @@ const mongoose = require("mongoose");
 
 const connectToDb = () => {
   mongoose.connect(process.env.DATABASE_URI, {
-    useNewParser: true,
+    useNewUrlParser: true,
     useUnifiedTopology: true,
   });
 };
 
 module.exports = connectToDb;
+

@@ -56,9 +56,19 @@ const del = async (req, res) => {
   }
 }
 
+const update = async (req,res) => {
+  try { 
+    await res.time.updateOne(res.novoTime);
+  } catch (err) {
+    res.status(500).send({ error: err});
+  }
+  res.send({message: "Time atualizado com sucesso!"});
+} 
+
 module.exports = {
   getAll,
   create,
   getById,
-  del
+  del,
+  update
 };

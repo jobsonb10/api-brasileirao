@@ -64,10 +64,26 @@ const update = async (req,res) => {
   res.send({message: "Time atualizado com sucesso!"});
 } 
 
+const filterByName = async (req, res) => {
+  const nome = req.query.nome;
+  if (!nome) {
+    return res.status(400).send({message: "Parametro não recebido!"});
+  }
+
+  try {
+    const personagens = await Time.find({nome: { $regex: `${nome}`, $options: "i"}})
+    return res.send({ personagens })
+  } catch (err) {
+    res.status(500).send({error: err});
+  }
+
+}
+
 module.exports = {
   getAll,
   create,
   getById,
   del,
-  update
+  update,
+  filterByName
 };

@@ -14,7 +14,7 @@ const timeSchema = new mongoose.Schema({
         require: true
     },
     idade:{
-        type: String,
+        type: Number,
         require: true
     }
 })

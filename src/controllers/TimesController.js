@@ -37,15 +37,14 @@ const create = async (req, res) => {
 };
 
 const getById = async (req, res) => {
-  const { id } = req.params;
-
   try {
-    const time = await Time.findById(id);
-    return res.status(200).send({ time });
+    const time = await res.time;
+    res.status(200).send({ time });
   } catch (err) {
     return res.status(500).send({ error: err});
   }
 };
+
 
 const del = async (req, res) => {
   try {
